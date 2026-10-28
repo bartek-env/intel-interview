@@ -1,0 +1,43 @@
+log_file: /var/log/gpu-manager.log
+last_boot_file: /var/lib/ubuntu-drivers-common/last_gfx_boot
+new_boot_file: /var/lib/ubuntu-drivers-common/last_gfx_boot
+can't access /opt/amdgpu-pro/bin/amdgpu-pro-px
+Looking for nvidia modules in /lib/modules/6.14.0-37-generic/kernel
+Looking for nvidia modules in /lib/modules/6.14.0-37-generic/kernel/nvidia-570srv-open
+Found nvidia.ko module in /lib/modules/6.14.0-37-generic/kernel/nvidia-570srv-open/nvidia.ko
+Looking for amdgpu modules in /lib/modules/6.14.0-37-generic/kernel
+Looking for amdgpu modules in /lib/modules/6.14.0-37-generic/updates/dkms
+Is nvidia loaded? yes
+Was nvidia unloaded? no
+Is nvidia blacklisted? no
+Is intel loaded? no
+Is radeon loaded? no
+Is radeon blacklisted? no
+Is amdgpu loaded? no
+Is amdgpu blacklisted? no
+Is amdgpu versioned? no
+Is amdgpu pro stack? no
+Is nouveau loaded? no
+Is nouveau blacklisted? yes
+Is nvidia kernel module available? yes
+Is amdgpu kernel module available? no
+Vendor/Device Id: 10de:1e89
+BusID "PCI:1@0:0:0"
+Is boot vga? yes
+Takes 0ms to wait for nvidia udev rules completed.
+Skipping "/dev/dri/card0", driven by "nvidia-drm"
+Skipping "/dev/dri/card0", driven by "nvidia-drm"
+Skipping "/dev/dri/card0", driven by "nvidia-drm"
+Skipping "/dev/dri/card0", driven by "nvidia-drm"
+Does it require offloading? no
+I couldn't open /var/lib/ubuntu-drivers-common/last_gfx_boot for reading.
+Create /var/lib/ubuntu-drivers-common/last_gfx_boot for the 1st time
+last cards number = 1
+Has amd? no
+Has intel? no
+Has nvidia? yes
+How many cards? 1
+Has the system changed? Yes
+System configuration has changed
+Single card detected
+Nothing to do

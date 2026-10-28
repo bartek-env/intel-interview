@@ -1,0 +1,70 @@
+Cloud-init v. 25.1.1-0ubuntu2 running 'init-local' at Fri, 19 Sep 2025 16:44:27 +0000. Up 13.28 seconds.
+Cloud-init v. 25.1.1-0ubuntu2 running 'init' at Fri, 19 Sep 2025 16:44:27 +0000. Up 14.09 seconds.
+ci-info: +++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++
+ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+ci-info: | Device |   Up  |  Address  |    Mask   | Scope |     Hw-Address    |
+ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+ci-info: | enp7s0 | False |     .     |     .     |   .   | d4:5d:64:7f:9a:86 |
+ci-info: |   lo   |  True | 127.0.0.1 | 255.0.0.0 |  host |         .         |
+ci-info: |   lo   |  True |  ::1/128  |     .     |  host |         .         |
+ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: | Route | Destination | Gateway | Interface | Flags |
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: +-------+-------------+---------+-----------+-------+
+2025-09-19 16:44:28,142 - lifecycle.py[WARNING]: Not unlocking password for user installer. 'lock_passwd: false' present in user-data but no 'passwd'/'plain_text_passwd'/'hashed_passwd' provided in user-data
+Cloud-init v. 25.1.1-0ubuntu2 running 'modules:config' at Fri, 19 Sep 2025 16:44:28 +0000. Up 14.47 seconds.
+Cloud-init v. 25.1.1-0ubuntu2 running 'modules:final' at Fri, 19 Sep 2025 16:44:32 +0000. Up 18.11 seconds.
+Cloud-init v. 25.1.1-0ubuntu2 finished at Fri, 19 Sep 2025 16:44:32 +0000. Datasource DataSourceNoCloud [seed=/var/lib/cloud/seed/nocloud].  Up 18.14 seconds
+Generating public/private rsa key pair.
+Your identification has been saved in /etc/ssh/ssh_host_rsa_key
+Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub
+The key fingerprint is:
+SHA256:OZr15oKWghZBDaCxAgc+jBVwJUmsFQHRyEc4fSnTjjE root@ubuntu-server
+The key's randomart image is:
++---[RSA 3072]----+
+|X@#Xo .          |
+|BX*E.+           |
+|=Bo O            |
+|o o. .   .       |
+|   .    S        |
+|  .    + o       |
+|   o  oo  o      |
+|  o . + .o       |
+| .   o   ..      |
++----[SHA256]-----+
+Generating public/private ecdsa key pair.
+Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+The key fingerprint is:
+SHA256:fKyL4/46ZJs259Pb3WHmMD1MZFgVHUElkRDaayt/dAA root@ubuntu-server
+The key's randomart image is:
++---[ECDSA 256]---+
+|            oo+OX|
+|           oE +..|
+|          . .o o |
+|       . .   .+  |
+|        S o o  o |
+|      o  o . .= .|
+|     o o... .+ O |
+|      B.o..+ .B.o|
+|     +=O+...o....|
++----[SHA256]-----+
+Generating public/private ed25519 key pair.
+Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+The key fingerprint is:
+SHA256:Z5lsTSFJCJ91oHpXlj9FgC+5YKpVfVw1//yUDAV1VxE root@ubuntu-server
+The key's randomart image is:
++--[ED25519 256]--+
+|      .. o=ooo+E@|
+|       ..+.o.o..*|
+|        +  .== .o|
+|       . .+B+.*oo|
+|      . S+O..+oo+|
+|       .o=  .  o.|
+|       o        .|
+|      .          |
+|                 |
++----[SHA256]-----+

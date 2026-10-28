@@ -1,0 +1,2693 @@
+
+---- [[ subiquity step initial ]] ----
+curtin: Installation started. (24.0.0-100-gaa2f5dd03)
+curtin: Installation finished.
+
+---- [[ subiquity step partitioning ]] ----
+curtin: Installation started. (24.0.0-100-gaa2f5dd03)
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: curtin command block-meta
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.046
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+get_path_to_storage_volume for volume partition-0({'device': 'disk-sda', 'size': 1127219200, 'wipe': 'superblock', 'flag': 'boot', 'number': 1, 'preserve': False, 'grub_device': True, 'offset': 1048576, 'id': 'partition-0', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.043
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.045
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda1
+get_path_to_storage_volume for volume partition-1({'device': 'disk-sda', 'size': 2147483648, 'wipe': 'superblock', 'number': 2, 'preserve': False, 'grub_device': False, 'offset': 1128267776, 'id': 'partition-1', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.043
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.046
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda2
+get_path_to_storage_volume for volume partition-3({'device': 'disk-sda', 'size': 858993459200, 'wipe': 'superblock', 'number': 3, 'preserve': False, 'grub_device': False, 'offset': 3275751424, 'id': 'partition-3', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.042
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.044
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda3
+block-meta: extracted devices to clear: ['/dev/sda', '/dev/sda1', '/dev/sda2', '/dev/sda3']
+Declared block devices: ['/dev/sda', '/dev/sda1', '/dev/sda2', '/dev/sda3']
+clearing devices=['/dev/sda', '/dev/sda1', '/dev/sda2', '/dev/sda3']
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta/clear-holders: removing previous storage devices
+Running command ['mdadm', '--assemble', '--scan', '-v'] with allowed return codes [0, 1, 2] (capture=True)
+mdadm assemble scan results:
+
+mdadm: looking for devices for further assembly
+mdadm: Cannot assemble mbr metadata on /dev/sdc1
+mdadm: Cannot assemble mbr metadata on /dev/sdc
+mdadm: no recogniseable superblock on /dev/dm-1
+mdadm: no recogniseable superblock on /dev/dm-0
+mdadm: no recogniseable superblock on /dev/sda3
+mdadm: no recogniseable superblock on /dev/sda2
+mdadm: Cannot assemble mbr metadata on /dev/sda1
+mdadm: Cannot assemble mbr metadata on /dev/sda
+mdadm: Cannot assemble mbr metadata on /dev/sdb2
+mdadm: no recogniseable superblock on /dev/sdb1
+mdadm: Cannot assemble mbr metadata on /dev/sdb
+mdadm: Cannot assemble mbr metadata on /dev/nvme0n1p4
+mdadm: Cannot assemble mbr metadata on /dev/nvme0n1p3
+mdadm: no recogniseable superblock on /dev/nvme0n1p2
+mdadm: Cannot assemble mbr metadata on /dev/nvme0n1p1
+mdadm: Cannot assemble mbr metadata on /dev/nvme0n1
+mdadm: no recogniseable superblock on /dev/loop6
+mdadm: no recogniseable superblock on /dev/loop5
+mdadm: no recogniseable superblock on /dev/loop4
+mdadm: no recogniseable superblock on /dev/loop3
+mdadm: no recogniseable superblock on /dev/loop2
+mdadm: no recogniseable superblock on /dev/loop1
+mdadm: no recogniseable superblock on /dev/loop0
+mdadm: No arrays found in config file or automatically
+
+Running command ['mdadm', '--detail', '--scan', '-v'] with allowed return codes [0, 1] (capture=True)
+mdadm detail scan after assemble:
+
+
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.003
+Detected multipath support, reload maps
+Running command ['multipath', '-r'] with allowed return codes [0] (capture=False)
+Verifying /dev/mapper/mpath* files are symlinks
+Running command ['dmsetup', 'ls', '-o', 'blkdevname'] with allowed return codes [0] (capture=True)
+multipath: dmsetup ls output:
+ubuntu--vg-data	(dm-1)
+ubuntu--vg-ubuntu--lv	(dm-0)
+
+Running command ['pvscan', '--config', 'devices{ filter = [ "a|/dev/mapper/mpath.*|", "a|/dev/mapper/dm_crypt-.*|", "r|.*|" ] }'] with allowed return codes [0] (capture=True)
+Running command ['vgscan', '--config', 'devices{ filter = [ "a|/dev/mapper/mpath.*|", "a|/dev/mapper/dm_crypt-.*|", "r|.*|" ] }'] with allowed return codes [0] (capture=True)
+Running command ['vgchange', '--activate=y', '--config', 'devices{ filter = [ "a|/dev/mapper/mpath.*|", "a|/dev/mapper/dm_crypt-.*|", "r|.*|" ] }'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.013
+Loading kernel module bcache via modprobe
+Running command ['modprobe', '--use-blacklist', 'bcache'] with allowed return codes [0] (capture=False)
+Loading kernel module zfs via modprobe
+Running command ['modprobe', '--use-blacklist', 'zfs'] with allowed return codes [0] (capture=False)
+zfs filesystem is not supported in this environment
+Generating device storage trees for path(s): ['/dev/sda', '/dev/sda1', '/dev/sda2', '/dev/sda3']
+devname '/sys/class/block/sda' had holders: []
+/dev/sda is multipath device partition? False
+/dev/sda is multipath device partition? False
+/dev/sda is multipath device partition? False
+devname '/sys/class/block/sda2' had holders: []
+devname '/sys/class/block/sda3' had holders: ['dm-1', 'dm-0']
+devname '/sys/class/block/dm-1' had holders: []
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/dm-1'] with allowed return codes [0] (capture=True)
+/dev/dm-1 is multipath device partition? False
+Running command ['dmsetup', 'info', '/dev/dm-1', '-C', '-o', 'uuid', '--noheadings'] with allowed return codes [0] (capture=True)
+devname '/sys/class/block/dm-0' had holders: []
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/dm-0'] with allowed return codes [0] (capture=True)
+/dev/dm-0 is multipath device partition? False
+Running command ['dmsetup', 'info', '/dev/dm-0', '-C', '-o', 'uuid', '--noheadings'] with allowed return codes [0] (capture=True)
+devname '/sys/class/block/sda1' had holders: []
+devname '/sys/class/block/sda1' had holders: []
+devname '/sys/class/block/sda2' had holders: []
+devname '/sys/class/block/sda3' had holders: ['dm-1', 'dm-0']
+devname '/sys/class/block/dm-1' had holders: []
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/dm-1'] with allowed return codes [0] (capture=True)
+/dev/dm-1 is multipath device partition? False
+Running command ['dmsetup', 'info', '/dev/dm-1', '-C', '-o', 'uuid', '--noheadings'] with allowed return codes [0] (capture=True)
+devname '/sys/class/block/dm-0' had holders: []
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/dm-0'] with allowed return codes [0] (capture=True)
+/dev/dm-0 is multipath device partition? False
+Running command ['dmsetup', 'info', '/dev/dm-0', '-C', '-o', 'uuid', '--noheadings'] with allowed return codes [0] (capture=True)
+Current device storage tree:
+sda
+|-- sda2
+|-- sda3
+|   |-- dm-1
+|   `-- dm-0
+`-- sda1
+sda1
+sda2
+sda3
+|-- dm-1
+`-- dm-0
+Shutdown Plan:
+{'level': 6, 'device': '/sys/class/block/dm-1', 'dev_type': 'lvm'}
+{'level': 6, 'device': '/sys/class/block/dm-0', 'dev_type': 'lvm'}
+{'level': 4, 'device': '/sys/class/block/sda2', 'dev_type': 'partition'}
+{'level': 4, 'device': '/sys/class/block/sda3', 'dev_type': 'partition'}
+{'level': 4, 'device': '/sys/class/block/sda1', 'dev_type': 'partition'}
+{'level': 2, 'device': '/sys/class/block/sda', 'dev_type': 'disk'}
+shutdown running on holder type: 'lvm' syspath: '/sys/class/block/dm-1'
+Running command ['dmsetup', 'splitname', 'ubuntu--vg-data', '-c', '--noheadings', '--separator', '=', '-o', 'vg_name,lv_name'] with allowed return codes [0] (capture=True)
+Wiping lvm logical volume: /dev/ubuntu-vg/data
+Running command ['wipefs', '--all', '--force', '/dev/ubuntu-vg/data'] with allowed return codes [0] (capture=False)
+/dev/ubuntu-vg/data: 2 bytes were erased at offset 0x00000438 (ext4): 53 ef
+wiping 1M on /dev/ubuntu-vg/data at offsets [0, -1048576]
+using "lvremove" on ubuntu-vg/data
+Running command ['lvremove', '--force', '--force', 'ubuntu-vg/data'] with allowed return codes [0] (capture=False)
+  Logical volume "data" successfully removed.
+Running command ['lvdisplay', '-C', '--separator', '=', '--noheadings', '-o', 'vg_name,lv_name'] with allowed return codes [0] (capture=True)
+Running command ['pvscan'] with allowed return codes [0] (capture=True)
+Running command ['vgscan'] with allowed return codes [0] (capture=True)
+shutdown running on holder type: 'lvm' syspath: '/sys/class/block/dm-0'
+Running command ['dmsetup', 'splitname', 'ubuntu--vg-ubuntu--lv', '-c', '--noheadings', '--separator', '=', '-o', 'vg_name,lv_name'] with allowed return codes [0] (capture=True)
+Wiping lvm logical volume: /dev/ubuntu-vg/ubuntu-lv
+Running command ['wipefs', '--all', '--force', '/dev/ubuntu-vg/ubuntu-lv'] with allowed return codes [0] (capture=False)
+/dev/ubuntu-vg/ubuntu-lv: 2 bytes were erased at offset 0x00000438 (ext4): 53 ef
+wiping 1M on /dev/ubuntu-vg/ubuntu-lv at offsets [0, -1048576]
+using "lvremove" on ubuntu-vg/ubuntu-lv
+Running command ['lvremove', '--force', '--force', 'ubuntu-vg/ubuntu-lv'] with allowed return codes [0] (capture=False)
+  Logical volume "ubuntu-lv" successfully removed.
+Running command ['lvdisplay', '-C', '--separator', '=', '--noheadings', '-o', 'vg_name,lv_name'] with allowed return codes [0] (capture=True)
+Running command ['pvdisplay', '-C', '--separator', '=', '--noheadings', '-o', 'vg_name,pv_name'] with allowed return codes [0] (capture=True)
+Running command ['vgremove', '--force', '--force', 'ubuntu-vg'] with allowed return codes [0, 5] (capture=False)
+  Volume group "ubuntu-vg" successfully removed
+Wiping lvm physical volume: /dev/sda3
+Running command ['wipefs', '--all', '--force', '/dev/sda3'] with allowed return codes [0] (capture=False)
+/dev/sda3: 8 bytes were erased at offset 0x00000218 (LVM2_member): 4c 56 4d 32 20 30 30 31
+wiping 1M on /dev/sda3 at offsets [0, -1048576]
+Running command ['pvscan'] with allowed return codes [0] (capture=True)
+Running command ['vgscan'] with allowed return codes [0] (capture=True)
+shutdown running on holder type: 'partition' syspath: '/sys/class/block/sda2'
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ },
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "vfat",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "4EA2-1EE8",
+  "device_path": "/dev/sda1"
+ },
+ "sda2": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "ext4",
+  "GROUP": "disk",
+  "KNAME": "sda2",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:2",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda2",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "2147483648",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "225feba5-aad1-4897-8c09-0cfc5912d933",
+  "device_path": "/dev/sda2"
+ },
+ "sda3": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda3",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:3",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda3",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "996927340544",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda3"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Checking if /dev/sda2 is a swap device
+Found swap magic: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda2'] with allowed return codes [0] (capture=True)
+/dev/sda2 is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda2'] with allowed return codes [0] (capture=True)
+/dev/sda2 is multipath device member? False
+wiping superblock on /dev/sda2
+wiping /dev/sda2 attempt 1/4
+Running command ['wipefs', '--all', '--force', '/dev/sda2'] with allowed return codes [0] (capture=False)
+/dev/sda2: 2 bytes were erased at offset 0x00000438 (ext4): 53 ef
+wiping 1M on /dev/sda2 at offsets [0, -1048576]
+successfully wiped device /dev/sda2 on attempt 1/4
+shutdown running on holder type: 'partition' syspath: '/sys/class/block/sda3'
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ },
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "vfat",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "4EA2-1EE8",
+  "device_path": "/dev/sda1"
+ },
+ "sda2": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "ext4",
+  "GROUP": "disk",
+  "KNAME": "sda2",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:2",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda2",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "2147483648",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "225feba5-aad1-4897-8c09-0cfc5912d933",
+  "device_path": "/dev/sda2"
+ },
+ "sda3": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda3",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:3",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda3",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "996927340544",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda3"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Checking if /dev/sda3 is a swap device
+Found swap magic: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda3'] with allowed return codes [0] (capture=True)
+/dev/sda3 is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda3'] with allowed return codes [0] (capture=True)
+/dev/sda3 is multipath device member? False
+wiping superblock on /dev/sda3
+wiping /dev/sda3 attempt 1/4
+Running command ['wipefs', '--all', '--force', '/dev/sda3'] with allowed return codes [0] (capture=False)
+wiping 1M on /dev/sda3 at offsets [0, -1048576]
+successfully wiped device /dev/sda3 on attempt 1/4
+shutdown running on holder type: 'partition' syspath: '/sys/class/block/sda1'
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ },
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "vfat",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "4EA2-1EE8",
+  "device_path": "/dev/sda1"
+ },
+ "sda2": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda2",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:2",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda2",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "2147483648",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda2"
+ },
+ "sda3": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda3",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:3",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda3",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "996927340544",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda3"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Checking if /dev/sda1 is a swap device
+Found swap magic: b'\x00\x00\x00\x00\x00\x00\x00\x00U\xaa'
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda1'] with allowed return codes [0] (capture=True)
+/dev/sda1 is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda1'] with allowed return codes [0] (capture=True)
+/dev/sda1 is multipath device member? False
+wiping superblock on /dev/sda1
+wiping /dev/sda1 attempt 1/4
+Running command ['wipefs', '--all', '--force', '/dev/sda1'] with allowed return codes [0] (capture=False)
+/dev/sda1: 8 bytes were erased at offset 0x00000052 (vfat): 46 41 54 33 32 20 20 20
+/dev/sda1: 1 byte was erased at offset 0x00000000 (vfat): eb
+/dev/sda1: 2 bytes were erased at offset 0x000001fe (vfat): 55 aa
+wiping 1M on /dev/sda1 at offsets [0, -1048576]
+successfully wiped device /dev/sda1 on attempt 1/4
+shutdown running on holder type: 'disk' syspath: '/sys/class/block/sda'
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ },
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "vfat",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "4EA2-1EE8",
+  "device_path": "/dev/sda1"
+ },
+ "sda2": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda2",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:2",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda2",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "2147483648",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda2"
+ },
+ "sda3": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda3",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:3",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda3",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "996927340544",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda3"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Checking if /dev/sda is a swap device
+Found swap magic: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+wiping superblock on /dev/sda
+wiping /dev/sda attempt 1/4
+Running command ['wipefs', '--all', '--force', '/dev/sda'] with allowed return codes [0] (capture=False)
+/dev/sda: 8 bytes were erased at offset 0x00000200 (gpt): 45 46 49 20 50 41 52 54
+/dev/sda: 8 bytes were erased at offset 0xe8e0db5e00 (gpt): 45 46 49 20 50 41 52 54
+/dev/sda: 2 bytes were erased at offset 0x000001fe (PMBR): 55 aa
+wiping 1M on /dev/sda at offsets [0, -1048576]
+successfully wiped device /dev/sda on attempt 1/4
+/sys/class/block/sda had partitions, issuing partition reread
+Running command ['blockdev', '--rereadpt', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.014
+block.sys_block_path: devname /dev/sda1 does not exist
+block.sys_block_path: devname /dev/sda2 does not exist
+block.sys_block_path: devname /dev/sda3 does not exist
+devname '/sys/class/block/sda' had holders: []
+/dev/sda is multipath device partition? False
+/dev/sda is multipath device partition? False
+/dev/sda is multipath device partition? False
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta/clear-holders: SUCCESS: removing previous storage devices
+blockmeta: detected storage config, using mode=custom
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring disk: disk-sda
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.042
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Acquiring fcntl LOCK_EX on /dev/sda
+Running command ['wipefs', '--all', '--force', '/dev/sda'] with allowed return codes [0] (capture=False)
+wiping 1M on /dev/sda at offsets [0, -1048576]
+labeling device: '/dev/sda' with 'gpt' partition table
+Running command ['wipefs', '--all', '--force', '/dev/sda'] with allowed return codes [0] (capture=False)
+wiping 1M on /dev/sda at offsets [0, -1048576]
+devname '/dev/sda' had holders: []
+Releasing fcntl LOCK_EX on /dev/sda
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring disk: disk-sda
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring partition: partition-0
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.069
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+sda logical_block_size_bytes: 512
+adding partition 'partition-0' to disk 'disk-sda' (ptable: 'gpt')
+partnum: 1 offset_sectors: 2048 length_sectors: 2201599
+Preparing partition location on disk /dev/sda
+Wiping 1M on /dev/sda at offset 1048576
+Running command ['sgdisk', '--new', '1:2048:2203647', '--typecode=1:ef00', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['blockdev', '--rereadpt', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.098
+TIMED udevadm_settle(exists='/dev/sda1'): 0.000
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring partition: partition-0
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring format: format-0
+get_path_to_storage_volume for volume partition-0({'device': 'disk-sda', 'size': 1127219200, 'wipe': 'superblock', 'flag': 'boot', 'number': 1, 'preserve': False, 'grub_device': True, 'offset': 1048576, 'id': 'partition-0', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.141
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.199
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda1
+mkfs /dev/sda1 info: {'fstype': 'fat32', 'volume': 'partition-0', 'preserve': False, 'id': 'format-0', 'type': 'format'}
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda1'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda1"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Running command ['mkfs.vfat', '-I', '-F', '32', '/dev/sda1'] with allowed return codes [0] (capture=True)
+Running command ['blkid', '-o', 'full'] with allowed return codes [0] (capture=True)
+Formated device type: partition
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring format: format-0
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring partition: partition-1
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.137
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ },
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "vfat",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "A4E2-D8E1",
+  "device_path": "/dev/sda1"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+sda logical_block_size_bytes: 512
+previous partition number for 'partition-1' found to be '1'
+partition_kname=sda1
+calc_partition_info: sda1 size_sectors=2201600 start_sectors=2048
+adding partition 'partition-1' to disk 'disk-sda' (ptable: 'gpt')
+partnum: 2 offset_sectors: 2203648 length_sectors: 4194303
+Preparing partition location on disk /dev/sda
+Wiping 1M on /dev/sda at offset 1128267776
+Running command ['sgdisk', '--new', '2:2203648:6397951', '--typecode=2:8300', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['blockdev', '--rereadpt', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.112
+TIMED udevadm_settle(exists='/dev/sda2'): 0.000
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring partition: partition-1
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring format: format-1
+get_path_to_storage_volume for volume partition-1({'device': 'disk-sda', 'size': 2147483648, 'wipe': 'superblock', 'number': 2, 'preserve': False, 'grub_device': False, 'offset': 1128267776, 'id': 'partition-1', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.066
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.067
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda2
+mkfs /dev/sda2 info: {'fstype': 'ext4', 'volume': 'partition-1', 'preserve': False, 'id': 'format-1', 'type': 'format'}
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda2'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda2": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda2",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:2",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda2",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "2147483648",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda2"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Running command ['mkfs.ext4', '-F', '-U', '874bf52e-f0c0-4b8c-ba9f-554f40b1aeaf', '/dev/sda2'] with allowed return codes [0] (capture=True)
+Formated device type: partition
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring format: format-1
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring partition: partition-3
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.072
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:0",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "Samsung SSD 860 ",
+  "MOUNTPOINT": "",
+  "NAME": "sda",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1000204886016",
+  "STATE": "running",
+  "TYPE": "disk",
+  "UUID": "",
+  "device_path": "/dev/sda"
+ },
+ "sda1": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "vfat",
+  "GROUP": "disk",
+  "KNAME": "sda1",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:1",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda1",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "1127219200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "A4E2-D8E1",
+  "device_path": "/dev/sda1"
+ },
+ "sda2": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "ext4",
+  "GROUP": "disk",
+  "KNAME": "sda2",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:2",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda2",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "2147483648",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "874bf52e-f0c0-4b8c-ba9f-554f40b1aeaf",
+  "device_path": "/dev/sda2"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+sda logical_block_size_bytes: 512
+previous partition number for 'partition-3' found to be '2'
+partition_kname=sda2
+calc_partition_info: sda2 size_sectors=4194304 start_sectors=2203648
+adding partition 'partition-3' to disk 'disk-sda' (ptable: 'gpt')
+partnum: 3 offset_sectors: 6397952 length_sectors: 1677721599
+Preparing partition location on disk /dev/sda
+Wiping 1M on /dev/sda at offset 3275751424
+Running command ['sgdisk', '--new', '3:6397952:1684119551', '--typecode=3:8300', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['blockdev', '--rereadpt', '/dev/sda'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.122
+TIMED udevadm_settle(exists='/dev/sda3'): 0.000
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring partition: partition-3
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring format: format-3
+get_path_to_storage_volume for volume partition-3({'device': 'disk-sda', 'size': 858993459200, 'wipe': 'superblock', 'number': 3, 'preserve': False, 'grub_device': False, 'offset': 3275751424, 'id': 'partition-3', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2', 'wwn-0x5002538e908076e4-part1']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.118
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.111
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda3
+mkfs /dev/sda3 info: {'fstype': 'ext4', 'volume': 'partition-3', 'preserve': False, 'id': 'format-3', 'type': 'format'}
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda3'] with allowed return codes [0] (capture=True)
+get_blockdev_sector_size: info:
+{
+ "sda3": {
+  "ALIGNMENT": "0",
+  "DISC-ALN": "0",
+  "DISC-GRAN": "512",
+  "DISC-MAX": "2147450880",
+  "DISC-ZERO": "0",
+  "FSTYPE": "",
+  "GROUP": "disk",
+  "KNAME": "sda3",
+  "LABEL": "",
+  "LOG-SEC": "512",
+  "MAJ:MIN": "8:3",
+  "MIN-IO": "512",
+  "MODE": "brw-rw----",
+  "MODEL": "",
+  "MOUNTPOINT": "",
+  "NAME": "sda3",
+  "OPT-IO": "0",
+  "OWNER": "root",
+  "PHY-SEC": "512",
+  "RM": "0",
+  "RO": "0",
+  "ROTA": "0",
+  "RQ-SIZE": "64",
+  "SIZE": "858993459200",
+  "STATE": "",
+  "TYPE": "part",
+  "UUID": "",
+  "device_path": "/dev/sda3"
+ }
+}
+get_blockdev_sector_size: (log=512, phys=512)
+Running command ['mkfs.ext4', '-F', '-U', '3d2c950e-dfb8-46dd-befc-3009d8677ddc', '/dev/sda3'] with allowed return codes [0] (capture=True)
+Formated device type: partition
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring format: format-3
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring mount: mount-3
+get_path_to_storage_volume for volume partition-3({'device': 'disk-sda', 'size': 858993459200, 'wipe': 'superblock', 'number': 3, 'preserve': False, 'grub_device': False, 'offset': 3275751424, 'id': 'partition-3', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part1', 'wwn-0x5002538e908076e4-part2']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.063
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.061
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda3
+volume_path=/dev/sda3 found slaves: ['sda3']
+kname_is_iscsi: no iscsi disk found for kname sda3
+kname_is_iscsi: no iscsi disk found for kname sda3
+Running command ['mount', '-t', 'ext4', '-o', 'defaults', '/dev/sda3', '/target/'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda3'] with allowed return codes [0] (capture=True)
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda3'] with allowed return codes [0] (capture=True)
+volspec: path=/dev/sda3 type=part
+info[DEVLINKS] = ['/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-partnum/3', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-uuid/3d2c950e-dfb8-46dd-befc-3009d8677ddc', '/dev/disk/by-id/scsi-35002538e908076e4-part3', '/dev/disk/by-uuid/3d2c950e-dfb8-46dd-befc-3009d8677ddc', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part3', '/dev/disk/by-diskseq/10-part3', '/dev/disk/by-partuuid/a27378b3-420e-4f28-9fd4-147f2d684729', '/dev/disk/by-id/ata-Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T-part3', '/dev/disk/by-path/pci-0000:00:17.0-ata-1-part3', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-partuuid/a27378b3-420e-4f28-9fd4-147f2d684729', '/dev/disk/by-id/wwn-0x5002538e908076e4-part3']
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring mount: mount-3
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring mount: mount-1
+get_path_to_storage_volume for volume partition-1({'device': 'disk-sda', 'size': 2147483648, 'wipe': 'superblock', 'number': 2, 'preserve': False, 'grub_device': False, 'offset': 1128267776, 'id': 'partition-1', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part1', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.043
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.042
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda2
+volume_path=/dev/sda2 found slaves: ['sda2']
+kname_is_iscsi: no iscsi disk found for kname sda2
+kname_is_iscsi: no iscsi disk found for kname sda2
+Running command ['mount', '-t', 'ext4', '-o', 'defaults', '/dev/sda2', '/target/boot'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda2'] with allowed return codes [0] (capture=True)
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda2'] with allowed return codes [0] (capture=True)
+volspec: path=/dev/sda2 type=part
+info[DEVLINKS] = ['/dev/disk/by-id/scsi-35002538e908076e4-part2', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part2', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-partnum/2', '/dev/disk/by-path/pci-0000:00:17.0-ata-1-part2', '/dev/disk/by-uuid/874bf52e-f0c0-4b8c-ba9f-554f40b1aeaf', '/dev/disk/by-diskseq/10-part2', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-uuid/874bf52e-f0c0-4b8c-ba9f-554f40b1aeaf', '/dev/disk/by-id/wwn-0x5002538e908076e4-part2', '/dev/disk/by-partuuid/9a67c34d-95a8-469b-a642-5d4a27842e40', '/dev/disk/by-id/ata-Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T-part2', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-partuuid/9a67c34d-95a8-469b-a642-5d4a27842e40']
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring mount: mount-1
+start: cmd-install/stage-partitioning/builtin/cmd-block-meta: configuring mount: mount-0
+get_path_to_storage_volume for volume partition-0({'device': 'disk-sda', 'size': 1127219200, 'wipe': 'superblock', 'flag': 'boot', 'number': 1, 'preserve': False, 'grub_device': True, 'offset': 1048576, 'id': 'partition-0', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part1', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.038
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.040
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda1
+volume_path=/dev/sda1 found slaves: ['sda1']
+kname_is_iscsi: no iscsi disk found for kname sda1
+kname_is_iscsi: no iscsi disk found for kname sda1
+Running command ['mount', '-t', 'vfat', '-o', 'defaults', '/dev/sda1', '/target/boot/efi'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda1'] with allowed return codes [0] (capture=True)
+Running command ['lsblk', '--noheadings', '--bytes', '--pairs', '--output=ALIGNMENT,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO,FSTYPE,GROUP,KNAME,LABEL,LOG-SEC,MAJ:MIN,MIN-IO,MODE,MODEL,MOUNTPOINT,NAME,OPT-IO,OWNER,PHY-SEC,RM,RO,ROTA,RQ-SIZE,SIZE,STATE,TYPE,UUID', '/dev/sda1'] with allowed return codes [0] (capture=True)
+volspec: path=/dev/sda1 type=part
+info[DEVLINKS] = ['/dev/disk/by-partuuid/d0120f09-0ced-4c08-8c85-3715cd9c3a03', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-partnum/1', '/dev/disk/by-id/wwn-0x5002538e908076e4-part1', '/dev/disk/by-path/pci-0000:00:17.0-ata-1-part1', '/dev/disk/by-diskseq/10-part1', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-partuuid/d0120f09-0ced-4c08-8c85-3715cd9c3a03', '/dev/disk/by-id/ata-Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T-part1', '/dev/disk/by-uuid/A4E2-D8E1', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part/by-uuid/A4E2-D8E1', '/dev/disk/by-path/pci-0000:00:17.0-ata-1.0-part1', '/dev/disk/by-id/scsi-35002538e908076e4-part1']
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: configuring mount: mount-0
+TIMED BLOCK_META: 16.118
+finish: cmd-install/stage-partitioning/builtin/cmd-block-meta: SUCCESS: curtin command block-meta
+curtin: Installation finished.
+
+---- [[ subiquity step extract ]] ----
+curtin: Installation started. (24.0.0-100-gaa2f5dd03)
+start: cmd-install/stage-extract/builtin/cmd-extract: curtin command extract
+Installing sources: [{'type': 'tgz', 'uri': 'cp:///tmp/tmpwd_fgxfo/mount'}] to target at /target
+start: cmd-install/stage-extract/builtin/cmd-extract: acquiring and extracting image from cp:///tmp/tmpwd_fgxfo/mount
+Setting up Trivial Source for stack /tmp/tmpwd_fgxfo/mount
+Running command ['rsync', '-aXHAS', '--one-file-system', '/tmp/tmpwd_fgxfo/mount/', '.'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-extract/builtin/cmd-extract: SUCCESS: acquiring and extracting image from cp:///tmp/tmpwd_fgxfo/mount
+Applying write_files from config.
+finish: cmd-install/stage-extract/builtin/cmd-extract: SUCCESS: curtin command extract
+curtin: Installation finished.
+
+---- [[ subiquity step curthooks ]] ----
+curtin: Installation started. (24.0.0-100-gaa2f5dd03)
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks: curtin command curthooks
+Running curtin builtin curthooks
+Configuring target system for distro: ubuntu osfamily: debian
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/writing-apt-config: configuring apt configuring apt
+No apt config provided, skipping
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Diverting original update-initramfs in target.
+Running command ['unshare', '--help'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-divert', '--add', '--rename', '--divert', '/usr/sbin/update-initramfs.curtin-disabled', '/usr/sbin/update-initramfs'] with allowed return codes [0] (capture=False)
+Adding 'local diversion of /usr/sbin/update-initramfs to /usr/sbin/update-initramfs.curtin-disabled'
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.003
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/writing-apt-config: SUCCESS: configuring apt configuring apt
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'lsb_release', '--all'] with allowed return codes [0] (capture=True)
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/installing-missing-packages: installing missing packages
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'dpkg-query', '--list'] with allowed return codes [0] (capture=True)
+Curtin config dependencies requires additional packages: ['e2fsprogs']
+Running command ['dpkg', '--print-architecture'] with allowed return codes [0] (capture=True)
+Running command ['apt-cache', 'pkgnames'] with allowed return codes [0] (capture=True)
+Running command ['apt-cache', 'pkgnames'] with allowed return codes [0] (capture=True)
+Skipping install of {'shim-signed', 'grub-efi-amd64', 'efibootmgr', 'grub-efi-amd64-signed', 'bridge-utils', 'ifenslave', 'vlan'}.  Not needed on netplan system.
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks: Installing packages on target system: ['efibootmgr', 'grub-efi-amd64', 'grub-efi-amd64-signed', 'shim-signed']
+Updating apt sources in /target
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', '--quiet', '--option=Acquire::Languages=none', 'update'] with allowed return codes [0] (capture=False)
+Ign:1 file:/cdrom plucky InRelease
+Get:2 file:/cdrom plucky Release [1075 B]
+Get:2 file:/cdrom plucky Release [1075 B]
+Hit:4 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Hit:5 http://pl.archive.ubuntu.com/ubuntu plucky InRelease
+Hit:6 http://pl.archive.ubuntu.com/ubuntu plucky-updates InRelease
+Hit:7 http://pl.archive.ubuntu.com/ubuntu plucky-backports InRelease
+Reading package lists...
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.003
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', '--quiet', '--assume-yes', '--option=Dpkg::options::=--force-unsafe-io', '--option=Dpkg::Options::=--force-confold', 'install', '--download-only', 'efibootmgr', 'grub-efi-amd64', 'grub-efi-amd64-signed', 'shim-signed'] with allowed return codes [0] (capture=False)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  grub-efi-amd64-bin grub-efi-amd64-unsigned mokutil
+The following packages will be REMOVED:
+  grub-gfxpayload-lists grub-pc
+The following NEW packages will be installed:
+  efibootmgr grub-efi-amd64 grub-efi-amd64-bin grub-efi-amd64-signed
+  grub-efi-amd64-unsigned mokutil shim-signed
+0 upgraded, 7 newly installed, 2 to remove and 139 not upgraded.
+Need to get 0 B/4350 kB of archives.
+After this operation, 24.4 MB of additional disk space will be used.
+Get:1 file:/cdrom plucky/main amd64 efibootmgr amd64 18-2 [31.6 kB]
+Get:2 file:/cdrom plucky/main amd64 grub-efi-amd64-unsigned amd64 2.12-5ubuntu11 [1394 kB]
+Get:3 file:/cdrom plucky/main amd64 grub-efi-amd64-bin amd64 2.12-5ubuntu11 [783 kB]
+Get:4 file:/cdrom plucky/main amd64 grub-efi-amd64 amd64 2.12-5ubuntu11 [52.7 kB]
+Get:5 file:/cdrom plucky/main amd64 grub-efi-amd64-signed amd64 1.212+2.12-5ubuntu11 [1395 kB]
+Get:6 file:/cdrom plucky/main amd64 mokutil amd64 0.6.0-2build3 [26.8 kB]
+Get:7 file:/cdrom plucky/main amd64 shim-signed amd64 1.59+15.8-0ubuntu2 [667 kB]
+Download complete and in download only mode
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', '--quiet', '--assume-yes', '--option=Dpkg::options::=--force-unsafe-io', '--option=Dpkg::Options::=--force-confold', 'install', 'efibootmgr', 'grub-efi-amd64', 'grub-efi-amd64-signed', 'shim-signed'] with allowed return codes [0] (capture=False)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  grub-efi-amd64-bin grub-efi-amd64-unsigned mokutil
+The following packages will be REMOVED:
+  grub-gfxpayload-lists grub-pc
+The following NEW packages will be installed:
+  efibootmgr grub-efi-amd64 grub-efi-amd64-bin grub-efi-amd64-signed
+  grub-efi-amd64-unsigned mokutil shim-signed
+0 upgraded, 7 newly installed, 2 to remove and 139 not upgraded.
+Need to get 0 B/4350 kB of archives.
+After this operation, 24.4 MB of additional disk space will be used.
+Get:1 file:/cdrom plucky/main amd64 efibootmgr amd64 18-2 [31.6 kB]
+Get:2 file:/cdrom plucky/main amd64 grub-efi-amd64-unsigned amd64 2.12-5ubuntu11 [1394 kB]
+Get:3 file:/cdrom plucky/main amd64 grub-efi-amd64-bin amd64 2.12-5ubuntu11 [783 kB]
+Get:4 file:/cdrom plucky/main amd64 grub-efi-amd64 amd64 2.12-5ubuntu11 [52.7 kB]
+Get:5 file:/cdrom plucky/main amd64 grub-efi-amd64-signed amd64 1.212+2.12-5ubuntu11 [1395 kB]
+Get:6 file:/cdrom plucky/main amd64 mokutil amd64 0.6.0-2build3 [26.8 kB]
+Get:7 file:/cdrom plucky/main amd64 shim-signed amd64 1.59+15.8-0ubuntu2 [667 kB]
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Preconfiguring packages ...
+E: Can not write log (Is /dev/pts mounted?) - posix_openpt (19: No such device)
+(Reading database ... 87222 files and directories currently installed.)
+Removing grub-pc (2.12-5ubuntu11) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Removing grub-gfxpayload-lists (0.7build2) ...
+Selecting previously unselected package efibootmgr.
+(Reading database ... 87200 files and directories currently installed.)
+Preparing to unpack .../0-efibootmgr_18-2_amd64.deb ...
+Unpacking efibootmgr (18-2) ...
+Selecting previously unselected package grub-efi-amd64-unsigned.
+Preparing to unpack .../1-grub-efi-amd64-unsigned_2.12-5ubuntu11_amd64.deb ...
+Unpacking grub-efi-amd64-unsigned (2.12-5ubuntu11) ...
+Selecting previously unselected package grub-efi-amd64-bin.
+Preparing to unpack .../2-grub-efi-amd64-bin_2.12-5ubuntu11_amd64.deb ...
+Unpacking grub-efi-amd64-bin (2.12-5ubuntu11) ...
+Selecting previously unselected package grub-efi-amd64.
+Preparing to unpack .../3-grub-efi-amd64_2.12-5ubuntu11_amd64.deb ...
+Unpacking grub-efi-amd64 (2.12-5ubuntu11) ...
+Selecting previously unselected package grub-efi-amd64-signed.
+Preparing to unpack .../4-grub-efi-amd64-signed_1.212+2.12-5ubuntu11_amd64.deb ...
+Unpacking grub-efi-amd64-signed (1.212+2.12-5ubuntu11) ...
+Selecting previously unselected package mokutil.
+Preparing to unpack .../5-mokutil_0.6.0-2build3_amd64.deb ...
+Unpacking mokutil (0.6.0-2build3) ...
+Selecting previously unselected package shim-signed.
+Preparing to unpack .../6-shim-signed_1.59+15.8-0ubuntu2_amd64.deb ...
+Unpacking shim-signed (1.59+15.8-0ubuntu2) ...
+Setting up efibootmgr (18-2) ...
+Setting up mokutil (0.6.0-2build3) ...
+Setting up grub-efi-amd64-unsigned (2.12-5ubuntu11) ...
+Setting up grub-efi-amd64-bin (2.12-5ubuntu11) ...
+Setting up grub-efi-amd64 (2.12-5ubuntu11) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Setting up grub-efi-amd64-signed (1.212+2.12-5ubuntu11) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Setting up shim-signed (1.59+15.8-0ubuntu2) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+update-alternatives: error: no alternatives for shimx64.efi.signed
+update-alternatives: using /usr/lib/shim/shimx64.nx.efi.signed.latest to provide /usr/lib/shim/shimx64.efi.signed (shimx64.efi.signed) in auto mode
+update-alternatives: using /usr/lib/shim/shimx64.efi.signed.latest to provide /usr/lib/shim/shimx64.efi.signed (shimx64.efi.signed) in auto mode
+Processing triggers for man-db (2.13.0-1) ...
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.008
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', 'clean'] with allowed return codes [0] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.005
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks: SUCCESS: Installing packages on target system: ['efibootmgr', 'grub-efi-amd64', 'grub-efi-amd64-signed', 'shim-signed']
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/installing-missing-packages: SUCCESS: installing missing packages
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-iscsi-service: configuring iscsi service
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-iscsi-service: SUCCESS: configuring iscsi service
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-mdadm-service: configuring raid (mdadm) service
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-mdadm-service: SUCCESS: configuring raid (mdadm) service
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-nvme-over-tcp: configuring NVMe over TCP
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-nvme-over-tcp: SUCCESS: configuring NVMe over TCP
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/installing-kernel: installing kernel
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'lsb_release', '--all'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'dpkg-query', '--show', '--showformat=${Package}/${db:Status-Abbrev}/${Provides}\n'] with allowed return codes [0] (capture=True)
+Running command ['dpkg', '--print-architecture'] with allowed return codes [0] (capture=True)
+Updating apt sources in /target
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', '--quiet', '--option=Acquire::Languages=none', 'update'] with allowed return codes [0] (capture=False)
+Ign:1 file:/cdrom plucky InRelease
+Get:2 file:/cdrom plucky Release [1075 B]
+Get:2 file:/cdrom plucky Release [1075 B]
+Hit:4 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Hit:5 http://pl.archive.ubuntu.com/ubuntu plucky InRelease
+Hit:6 http://pl.archive.ubuntu.com/ubuntu plucky-updates InRelease
+Hit:7 http://pl.archive.ubuntu.com/ubuntu plucky-backports InRelease
+Reading package lists...
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.003
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', '--quiet', '--assume-yes', '--option=Dpkg::options::=--force-unsafe-io', '--option=Dpkg::Options::=--force-confold', 'install', '--download-only', 'linux-generic'] with allowed return codes [0] (capture=False)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  bpftool linux-headers-6.14.0-29 linux-headers-6.14.0-29-generic
+  linux-headers-generic linux-image-6.14.0-29-generic linux-image-generic
+  linux-libc-dev linux-modules-6.14.0-29-generic
+  linux-modules-extra-6.14.0-29-generic linux-perf linux-tools-6.14.0-29
+  linux-tools-6.14.0-29-generic linux-tools-common
+Suggested packages:
+  linux-tools
+The following NEW packages will be installed:
+  linux-headers-6.14.0-29 linux-headers-6.14.0-29-generic
+  linux-image-6.14.0-29-generic linux-modules-6.14.0-29-generic
+  linux-modules-extra-6.14.0-29-generic linux-tools-6.14.0-29
+  linux-tools-6.14.0-29-generic
+The following packages will be upgraded:
+  bpftool linux-generic linux-headers-generic linux-image-generic
+  linux-libc-dev linux-perf linux-tools-common
+7 upgraded, 7 newly installed, 0 to remove and 132 not upgraded.
+Need to get 205 MB of archives.
+After this operation, 301 MB of additional disk space will be used.
+Get:1 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 bpftool amd64 7.6.0+6.14.0-29.29 [1209 kB]
+Get:2 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-modules-6.14.0-29-generic amd64 6.14.0-29.29 [42.2 MB]
+Get:3 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-image-6.14.0-29-generic amd64 6.14.0-29.29 [15.5 MB]
+Get:4 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-modules-extra-6.14.0-29-generic amd64 6.14.0-29.29 [120 MB]
+Get:5 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-generic amd64 6.14.0-29.29 [1702 B]
+Get:6 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-image-generic amd64 6.14.0-29.29 [11.5 kB]
+Get:7 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-headers-6.14.0-29 all 6.14.0-29.29 [14.3 MB]
+Get:8 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-headers-6.14.0-29-generic amd64 6.14.0-29.29 [4198 kB]
+Get:9 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-headers-generic amd64 6.14.0-29.29 [11.3 kB]
+Get:10 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-libc-dev amd64 6.14.0-29.29 [1786 kB]
+Get:11 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-perf amd64 6.14.0-29.29 [4183 kB]
+Get:12 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-tools-common all 6.14.0-29.29 [357 kB]
+Get:13 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-tools-6.14.0-29 amd64 6.14.0-29.29 [1455 kB]
+Get:14 http://pl.archive.ubuntu.com/ubuntu plucky-updates/main amd64 linux-tools-6.14.0-29-generic amd64 6.14.0-29.29 [1616 B]
+Fetched 205 MB in 19s (11.0 MB/s)
+Download complete and in download only mode
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', '--quiet', '--assume-yes', '--option=Dpkg::options::=--force-unsafe-io', '--option=Dpkg::Options::=--force-confold', 'install', 'linux-generic'] with allowed return codes [0] (capture=False)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  bpftool linux-headers-6.14.0-29 linux-headers-6.14.0-29-generic
+  linux-headers-generic linux-image-6.14.0-29-generic linux-image-generic
+  linux-libc-dev linux-modules-6.14.0-29-generic
+  linux-modules-extra-6.14.0-29-generic linux-perf linux-tools-6.14.0-29
+  linux-tools-6.14.0-29-generic linux-tools-common
+Suggested packages:
+  linux-tools
+The following NEW packages will be installed:
+  linux-headers-6.14.0-29 linux-headers-6.14.0-29-generic
+  linux-image-6.14.0-29-generic linux-modules-6.14.0-29-generic
+  linux-modules-extra-6.14.0-29-generic linux-tools-6.14.0-29
+  linux-tools-6.14.0-29-generic
+The following packages will be upgraded:
+  bpftool linux-generic linux-headers-generic linux-image-generic
+  linux-libc-dev linux-perf linux-tools-common
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+7 upgraded, 7 newly installed, 0 to remove and 132 not upgraded.
+Need to get 0 B/205 MB of archives.
+After this operation, 301 MB of additional disk space will be used.
+E: Can not write log (Is /dev/pts mounted?) - posix_openpt (19: No such device)
+(Reading database ... 87555 files and directories currently installed.)
+Preparing to unpack .../00-bpftool_7.6.0+6.14.0-29.29_amd64.deb ...
+Unpacking bpftool (7.6.0+6.14.0-29.29) over (7.6.0+6.14.0-15.15) ...
+Selecting previously unselected package linux-modules-6.14.0-29-generic.
+Preparing to unpack .../01-linux-modules-6.14.0-29-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-modules-6.14.0-29-generic (6.14.0-29.29) ...
+Selecting previously unselected package linux-image-6.14.0-29-generic.
+Preparing to unpack .../02-linux-image-6.14.0-29-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-image-6.14.0-29-generic (6.14.0-29.29) ...
+Selecting previously unselected package linux-modules-extra-6.14.0-29-generic.
+Preparing to unpack .../03-linux-modules-extra-6.14.0-29-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-modules-extra-6.14.0-29-generic (6.14.0-29.29) ...
+Preparing to unpack .../04-linux-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-generic (6.14.0-29.29) over (6.14.0-15.15) ...
+Preparing to unpack .../05-linux-image-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-image-generic (6.14.0-29.29) over (6.14.0-15.15) ...
+Selecting previously unselected package linux-headers-6.14.0-29.
+Preparing to unpack .../06-linux-headers-6.14.0-29_6.14.0-29.29_all.deb ...
+Unpacking linux-headers-6.14.0-29 (6.14.0-29.29) ...
+Selecting previously unselected package linux-headers-6.14.0-29-generic.
+Preparing to unpack .../07-linux-headers-6.14.0-29-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-headers-6.14.0-29-generic (6.14.0-29.29) ...
+Preparing to unpack .../08-linux-headers-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-headers-generic (6.14.0-29.29) over (6.14.0-15.15) ...
+Preparing to unpack .../09-linux-libc-dev_6.14.0-29.29_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.14.0-29.29) over (6.14.0-15.15) ...
+Preparing to unpack .../10-linux-perf_6.14.0-29.29_amd64.deb ...
+Unpacking linux-perf (6.14.0-29.29) over (6.14.0-15.15) ...
+Preparing to unpack .../11-linux-tools-common_6.14.0-29.29_all.deb ...
+Unpacking linux-tools-common (6.14.0-29.29) over (6.14.0-15.15) ...
+Selecting previously unselected package linux-tools-6.14.0-29.
+Preparing to unpack .../12-linux-tools-6.14.0-29_6.14.0-29.29_amd64.deb ...
+Unpacking linux-tools-6.14.0-29 (6.14.0-29.29) ...
+Selecting previously unselected package linux-tools-6.14.0-29-generic.
+Preparing to unpack .../13-linux-tools-6.14.0-29-generic_6.14.0-29.29_amd64.deb ...
+Unpacking linux-tools-6.14.0-29-generic (6.14.0-29.29) ...
+Setting up bpftool (7.6.0+6.14.0-29.29) ...
+Setting up linux-libc-dev:amd64 (6.14.0-29.29) ...
+Setting up linux-perf (6.14.0-29.29) ...
+Setting up linux-headers-6.14.0-29 (6.14.0-29.29) ...
+Setting up linux-modules-6.14.0-29-generic (6.14.0-29.29) ...
+Setting up linux-image-6.14.0-29-generic (6.14.0-29.29) ...
+I: /boot/vmlinuz is now a symlink to vmlinuz-6.14.0-29-generic
+I: /boot/initrd.img is now a symlink to initrd.img-6.14.0-29-generic
+Setting up linux-tools-common (6.14.0-29.29) ...
+Setting up linux-headers-6.14.0-29-generic (6.14.0-29.29) ...
+Setting up linux-tools-6.14.0-29 (6.14.0-29.29) ...
+Setting up linux-modules-extra-6.14.0-29-generic (6.14.0-29.29) ...
+Setting up linux-headers-generic (6.14.0-29.29) ...
+Setting up linux-image-generic (6.14.0-29.29) ...
+Setting up linux-tools-6.14.0-29-generic (6.14.0-29.29) ...
+Setting up linux-generic (6.14.0-29.29) ...
+Processing triggers for man-db (2.13.0-1) ...
+Processing triggers for linux-image-6.14.0-29-generic (6.14.0-29.29) ...
+/etc/kernel/postinst.d/kdump-tools:
+W: kdump-tools: Executing in a chroot, skipping initramfs generation.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.003
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'apt-get', 'clean'] with allowed return codes [0] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.006
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+ensure_one_kernel: kernels before install {'linux-image-6.14.0-15-generic'}
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'dpkg-query', '--show', '--showformat=${Package}/${db:Status-Abbrev}/${Provides}\n'] with allowed return codes [0] (capture=True)
+ensure_one_kernel: kernels after install {'linux-image-6.14.0-29-generic', 'linux-image-6.14.0-15-generic'}
+Removing packages ['linux-image-6.14.0-15-generic']
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'eatmydata', 'apt-get', '--quiet', '--assume-yes', '--option=Dpkg::options::=--force-unsafe-io', '--option=Dpkg::Options::=--force-confold', 'autopurge', 'linux-image-6.14.0-15-generic'] with allowed return codes [0] (capture=False)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following packages will be REMOVED:
+  grub-pc-bin* linux-image-6.14.0-15-generic*
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+0 upgraded, 0 newly installed, 2 to remove and 132 not upgraded.
+After this operation, 19.1 MB disk space will be freed.
+E: Can not write log (Is /dev/pts mounted?) - posix_openpt (19: No such device)
+(Reading database ... 126826 files and directories currently installed.)
+Removing grub-pc-bin (2.12-5ubuntu11) ...
+Removing linux-image-6.14.0-15-generic (6.14.0-15.15) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+W: Removing the running kernel
+I: /boot/vmlinuz.old is now a symlink to vmlinuz-6.14.0-29-generic
+/etc/kernel/postrm.d/kdump-tools:
+kdump-tools: Removing kdump tracking files for kernel version: 6.14.0-15-generic
+(Reading database ... 126511 files and directories currently installed.)
+Purging configuration files for linux-image-6.14.0-15-generic (6.14.0-15.15) ...
+rmdir: failed to remove '/lib/modules/6.14.0-15-generic': Directory not empty
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.005
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/installing-kernel: SUCCESS: installing kernel
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/setting-up-swap: setting up swap
+swap suggestion analysis: available: 783G maxsize: 8G memsize: 15G size before decision: 4G suggested size: 4G reason: lesser of formula or maxsize
+Running command ['findmnt', '--noheading', '--target', '/target/', '-o', 'FSTYPE'] with allowed return codes [0] (capture=True)
+Running command ['sh', '-c', 'rm -f "$1" && umask 0066 && truncate -s 0 "$1" && { chattr +C "$1" || true; } && fallocate -l "${2}M" "$1" && mkswap "$1" || { r=$?; rm -f "$1"; exit $r; }', 'setup_swap', '/target//swap.img', '4096'] with allowed return codes [0] (capture=False)
+chattr: Operation not supported while setting flags on /target//swap.img
+Setting up swapspace version 1, size = 4 GiB (4294963200 bytes)
+no label, UUID=28634f2e-dd92-476d-8df1-f1aad79630d4
+creating swapfile '/swap.img' of 4096MB took 0.016 seconds
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/setting-up-swap: SUCCESS: setting up swap
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/apply-networking-config: apply networking config
+copying interfaces
+no interfaces file to copy!
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/apply-networking-config: SUCCESS: apply networking config
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/writing-etc-fstab: writing etc/fstab
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/writing-etc-fstab: SUCCESS: writing etc/fstab
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-multipath: configuring multipath
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sdc1'] with allowed return codes [0] (capture=True)
+/dev/sdc1 is multipath device? False
+/dev/sdc1 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sdc1'] with allowed return codes [0] (capture=True)
+/dev/sdc1 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop0'] with allowed return codes [0] (capture=True)
+/dev/loop0 is multipath device? False
+/dev/loop0 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop0'] with allowed return codes [0] (capture=True)
+/dev/loop0 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop4'] with allowed return codes [0] (capture=True)
+/dev/loop4 is multipath device? False
+/dev/loop4 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop4'] with allowed return codes [0] (capture=True)
+/dev/loop4 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop6'] with allowed return codes [0] (capture=True)
+/dev/loop6 is multipath device? False
+/dev/loop6 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop6'] with allowed return codes [0] (capture=True)
+/dev/loop6 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop5'] with allowed return codes [0] (capture=True)
+/dev/loop5 is multipath device? False
+/dev/loop5 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop5'] with allowed return codes [0] (capture=True)
+/dev/loop5 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop0'] with allowed return codes [0] (capture=True)
+/dev/loop0 is multipath device? False
+/dev/loop0 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop0'] with allowed return codes [0] (capture=True)
+/dev/loop0 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop1'] with allowed return codes [0] (capture=True)
+/dev/loop1 is multipath device? False
+/dev/loop1 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop1'] with allowed return codes [0] (capture=True)
+/dev/loop1 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop0'] with allowed return codes [0] (capture=True)
+/dev/loop0 is multipath device? False
+/dev/loop0 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop0'] with allowed return codes [0] (capture=True)
+/dev/loop0 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop1'] with allowed return codes [0] (capture=True)
+/dev/loop1 is multipath device? False
+/dev/loop1 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/loop1'] with allowed return codes [0] (capture=True)
+/dev/loop1 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sdc1'] with allowed return codes [0] (capture=True)
+/dev/sdc1 is multipath device? False
+/dev/sdc1 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sdc1'] with allowed return codes [0] (capture=True)
+/dev/sdc1 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda3'] with allowed return codes [0] (capture=True)
+/dev/sda3 is multipath device? False
+/dev/sda3 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda3'] with allowed return codes [0] (capture=True)
+/dev/sda3 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda2'] with allowed return codes [0] (capture=True)
+/dev/sda2 is multipath device? False
+/dev/sda2 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda2'] with allowed return codes [0] (capture=True)
+/dev/sda2 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda1'] with allowed return codes [0] (capture=True)
+/dev/sda1 is multipath device? False
+/dev/sda1 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda1'] with allowed return codes [0] (capture=True)
+/dev/sda1 is multipath device member? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sdc1'] with allowed return codes [0] (capture=True)
+/dev/sdc1 is multipath device? False
+/dev/sdc1 is multipath device partition? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sdc1'] with allowed return codes [0] (capture=True)
+/dev/sdc1 is multipath device member? False
+Multipath detection found: None
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-multipath: SUCCESS: configuring multipath
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/system-upgrade: updating packages on target system
+system_upgrade disabled by config.
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/system-upgrade: SUCCESS: updating packages on target system
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/pollinate-user-agent: configuring pollinate user-agent on target
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/pollinate-user-agent: SUCCESS: configuring pollinate user-agent on target
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-kernel-crash-dumps: configuring kernel crash dumps settings
+kernel-crash-dumps enablement script found.
+Running conditional enablement script...
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', '/usr/share/kdump-tools/kdump_set_default'] with allowed return codes [0] (capture=False)
+KDump Default Enablement Criteria: CPU Architectures: x86_64 aarch64 s390x, CPU Threads >= 4, RAM/Swap: 6-2048 GB, Free Space in /var >= 5x RAM/Swap (75 GB)
+Hardware Found: CPU Architecture: x86_64, CPU Threads: 6, Memory: 15 GB, Free space in /var:  740 GB
+KDump will be enabled.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_CTYPE to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_ALL to default locale: No such file or directory
+Subroutine Debconf::FrontEnd::Editor::SUPER::screenwidth redefined at /usr/share/perl5/Debconf/Base.pm line 32, <GEN1> line 3.
+Subroutine Debconf::FrontEnd::Editor::SUPER::screenwidth redefined at /usr/share/perl5/Debconf/Base.pm line 32, <GEN1> line 3.
+Subroutine Debconf::Element::Editor::Boolean::SUPER::value redefined at /usr/share/perl5/Debconf/Base.pm line 32.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Running in chroot, ignoring command 'daemon-reload'
+Running in chroot, ignoring command 'is-active'
+invoke-rc.d: policy-rc.d denied execution of restart.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Running in chroot, ignoring command 'daemon-reload'
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+/usr/sbin/policy-rc.d returned 101, not running 'restart kdump-tools.service'
+Running in chroot, ignoring command 'daemon-reload'
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+/usr/sbin/policy-rc.d returned 101, not running 'restart kdump-tools-dump.service'
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.005
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-kernel-crash-dumps: SUCCESS: configuring kernel crash dumps settings
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/updating-initramfs-configuration: updating initramfs configuration
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-divert', '--list'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.008
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Restoring update-initramfs in target for initrd updates.
+del_file: removed /target/usr/sbin/update-initramfs
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-divert', '--rename', '--remove', '/usr/sbin/update-initramfs'] with allowed return codes [0] (capture=False)
+Removing 'local diversion of /usr/sbin/update-initramfs to /usr/sbin/update-initramfs.curtin-disabled'
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.008
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-divert', '--list'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.007
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'update-initramfs', '-c', '-k', '6.14.0-29-generic'] with allowed return codes [0] (capture=False)
+update-initramfs: Generating /boot/initrd.img-6.14.0-29-generic
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.003
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/updating-initramfs-configuration: SUCCESS: updating initramfs configuration
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/kernel-postinstall: running kernel postinstall hooks
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-query', '--show', '--showformat=${Package}/${db:Status-Abbrev}/${Provides}\n'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-reconfigure', '--frontend=noninteractive', 'linux-image-6.14.0-29-generic'] with allowed return codes [0] (capture=False)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = (unset),
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MESSAGES = (unset),
+	LC_MONETARY = (unset),
+	LC_ADDRESS = (unset),
+	LC_IDENTIFICATION = (unset),
+	LC_MEASUREMENT = (unset),
+	LC_PAPER = (unset),
+	LC_TELEPHONE = (unset),
+	LC_NAME = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+I: /boot/initrd.img.old is now a symlink to initrd.img-6.14.0-29-generic
+I: /boot/initrd.img is now a symlink to initrd.img-6.14.0-29-generic
+Processing triggers for linux-image-6.14.0-29-generic (6.14.0-29.29) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-6.14.0-29-generic
+/etc/kernel/postinst.d/kdump-tools:
+W: kdump-tools: Executing in a chroot, skipping initramfs generation.
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.008
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/kernel-postinstall: SUCCESS: running kernel postinstall hooks
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-bootloader: configuring target system bootloader
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/install-grub: installing grub to target devices
+setup grub on target /target
+Found primary UEFI ESP: partition-0
+Found UEFI ESP(s) for grub install: ['partition-0']
+get_path_to_storage_volume for volume partition-0({'device': 'disk-sda', 'size': 1127219200, 'wipe': 'superblock', 'flag': 'boot', 'number': 1, 'preserve': False, 'grub_device': True, 'offset': 1048576, 'path': '/dev/sda1', 'id': 'partition-0', 'type': 'partition'})
+get_path_to_storage_volume for volume disk-sda({'ptable': 'gpt', 'serial': 'Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T', 'wwn': '0x5002538e908076e4', 'path': '/dev/sda', 'wipe': 'superblock-recursive', 'preserve': False, 'name': '', 'grub_device': False, 'id': 'disk-sda', 'type': 'disk'})
+Processing serial 0x5002538e908076e4 via udev to 0x5002538e908076e4
+lookup_disks found: ['wwn-0x5002538e908076e4', 'wwn-0x5002538e908076e4-part1', 'wwn-0x5002538e908076e4-part3', 'wwn-0x5002538e908076e4-part2']
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device? False
+Running command ['udevadm', 'info', '--query=property', '--export', '/dev/sda'] with allowed return codes [0] (capture=True)
+/dev/sda is multipath device member? False
+block.lookup_disk() returning path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.067
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda
+Running command ['partprobe', '/dev/sda'] with allowed return codes [0, 1] (capture=False)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED udevadm_settle(): 0.085
+devsync happy - path /dev/sda now exists
+return volume path /dev/sda1
+install_devices: ['/dev/sda1']
+Generating grub debconf_selections for devices=['/dev/sda1'] uefi=True
+Applying grub debconf_selections config:
+{'debconf_selections': {'grub': 'grub-pc grub-efi/install_devices multiselect /dev/disk/by-id/ata-Samsung_SSD_860_EVO_1TB_S4CSNX0N818732T-part1'}}
+Applying debconf selections
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'debconf-set-selections'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'dpkg-query', '--list'] with allowed return codes [0] (capture=True)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'efibootmgr', '-v'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.007
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'efibootmgr', '-v'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.006
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+UEFI remove old olders efi state:
+EFIBootState(current='0003', timeout='1 seconds', order=['0002', '0000', '0003'], entries={'0000': EFIBootEntry(name='Windows Boot Manager', path='HD(1,GPT,98ae2080-2e9b-4b38-b316-60baf250b2bf,0x800,0x32000)/File(\\EFI\\MICROSOFT\\BOOT\\BOOTMGFW.EFI)57494e444f5753000100000088000000780000004200430044004f0042004a004500430054003d007b00390064006500610038003600320063002d0035006300640064002d0034006500370030002d0061006300630031002d006600330032006200330034003400640034003700390035007d00000068000100000010000000040000007fff0400'), '0002': EFIBootEntry(name='Ubuntu', path='HD(1,GPT,2ac71378-00a4-40a7-a724-2fc3613f02a6,0x800,0x219800)/File(\\EFI\\UBUNTU\\SHIMX64.EFI)'), '0003': EFIBootEntry(name='UEFI: USB, Partition 1', path='PciRoot(0x0)/Pci(0x14,0x0)/USB(17,0)/HD(1,MBR,0x67438c,0x800,0x752f7c0)0000424f')})
+Skipped removing 2 old UEFI entries.
+UEFI entry 'Windows Boot Manager' might no longer exist and should be removed.
+UEFI entry 'Ubuntu' might no longer exist and should be removed.
+installing grub to target=/target devices=['/dev/sda1'] [replace_defaults=True]
+Checking if target_proc (/target/proc) is a mount
+It's not, using normal behavior
+Running command ['unshare', '--fork', '--pid', '--', 'chroot', '/target', 'dpkg', '--print-architecture'] with allowed return codes [0] (capture=True)
+updated /target/etc/default/grub to set: GRUB_CMDLINE_LINUX_DEFAULT=""
+Using grub install command: /usr/lib/grub/grub-multi-install
+Grub install cmds:
+[['efibootmgr', '-v'], ['dpkg-reconfigure', 'grub-efi-amd64'], ['update-grub'], ['/usr/lib/grub/grub-multi-install'], ['efibootmgr', '-v']]
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'efibootmgr', '-v'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'dpkg-reconfigure', 'grub-efi-amd64'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'update-grub'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', '/usr/lib/grub/grub-multi-install'] with allowed return codes [0] (capture=True)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'efibootmgr', '-v'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.008
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+Skipped reordering of UEFI boot methods.
+Currently booted UEFI loader might no longer boot.
+Running command ['mount', '--bind', '/dev', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/proc', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/run', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/sys/firmware/efi/efivars', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--bind', '/target/usr/bin/true', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Checking if target_proc (/target/proc) is a mount
+It is, so unshare will use --mount-proc=/target/proc
+Running command ['unshare', '--fork', '--pid', '--mount-proc=/target/proc', '--', 'chroot', '/target', 'efibootmgr', '-v'] with allowed return codes [0] (capture=True)
+Running command ['udevadm', 'settle'] with allowed return codes [0] (capture=False)
+TIMED subp(['udevadm', 'settle']): 0.007
+Running command ['mount', '--make-private', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/usr/bin/ischroot'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys/firmware/efi/efivars'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/sys'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/run'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/proc'] with allowed return codes [0] (capture=False)
+Running command ['mount', '--make-private', '/target/dev'] with allowed return codes [0] (capture=False)
+Running command ['umount', '/target/dev'] with allowed return codes [0] (capture=False)
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/install-grub: SUCCESS: installing grub to target devices
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/configuring-bootloader: SUCCESS: configuring target system bootloader
+start: cmd-install/stage-curthooks/builtin/cmd-curthooks/copy-cdrom-metadata: copying metadata from /cdrom
+copying media-info into target
+/cdrom/.disk/ubuntu_dist_channel not found, skipping
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks/copy-cdrom-metadata: SUCCESS: copying metadata from /cdrom
+finish: cmd-install/stage-curthooks/builtin/cmd-curthooks: SUCCESS: curtin command curthooks
+{'current': '0003', 'timeout': '1 seconds', 'order': '0002,0000,0003'}
+{'current': '0003', 'timeout': '1 seconds', 'order': '0002,0000,0003'}
+{'current': '0003', 'timeout': '1 seconds', 'order': '0002,0000,0003'}
+curtin: Installation finished.

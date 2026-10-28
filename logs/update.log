@@ -1,0 +1,352 @@
++ NEXT_MAJOR=33
++ curl -fsSL -o nextcloud.tar.bz2 https://download.nextcloud.com/server/releases/latest-33.tar.bz2
++ curl -fsSL -o nextcloud.tar.bz2.asc https://download.nextcloud.com/server/releases/latest-33.tar.bz2.asc
+++ mktemp -d
++ GNUPGHOME=/tmp/tmp.hWMCiF2fWi
++ export GNUPGHOME
++ gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 28806A878AE423A28372792ED75899B9A724937A
+gpg: keybox '/tmp/tmp.hWMCiF2fWi/pubring.kbx' created
+gpg: /tmp/tmp.hWMCiF2fWi/trustdb.gpg: trustdb created
+gpg: key D75899B9A724937A: public key "Nextcloud Security <security@nextcloud.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
++ gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2
+gpg: Signature made Thu Sep 10 15:29:28 2026 CEST
+gpg:                using RSA key 28806A878AE423A28372792ED75899B9A724937A
+gpg: Good signature from "Nextcloud Security <security@nextcloud.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 2880 6A87 8AE4 23A2 8372  792E D758 99B9 A724 937A
++ mkdir -p /usr/src/tmp
++ tar -xjf nextcloud.tar.bz2 -C /usr/src/tmp/
++ gpgconf --kill all
++ rm nextcloud.tar.bz2.asc nextcloud.tar.bz2
++ mkdir -p /usr/src/tmp/nextcloud/data
++ mkdir -p /usr/src/tmp/nextcloud/custom_apps
++ chmod +x /usr/src/tmp/nextcloud/occ
++ cp -r /usr/src/nextcloud/config/CAN_INSTALL /usr/src/nextcloud/config/aio.config.php /usr/src/nextcloud/config/apcu.config.php /usr/src/nextcloud/config/apps.config.php /usr/src/nextcloud/config/certificates-bundle.config.php /usr/src/nextcloud/config/config.sample.php /usr/src/nextcloud/config/postgres.config.php /usr/src/nextcloud/config/proxy.config.php /usr/src/nextcloud/config/redis.config.php /usr/src/nextcloud/config/reverse-proxy.config.php /usr/src/nextcloud/config/s3.config.php /usr/src/nextcloud/config/server.config.php /usr/src/nextcloud/config/smtp.config.php /usr/src/nextcloud/config/swift.config.php /usr/src/tmp/nextcloud/config/
++ mkdir -p /usr/src/tmp/nextcloud/apps/nextcloud-aio
++ cp -r /usr/src/nextcloud/apps/nextcloud-aio/appinfo /usr/src/nextcloud/apps/nextcloud-aio/composer /usr/src/nextcloud/apps/nextcloud-aio/lib /usr/src/nextcloud/apps/nextcloud-aio/readme.md /usr/src/nextcloud/apps/nextcloud-aio/templates /usr/src/tmp/nextcloud/apps/nextcloud-aio/
++ mv /usr/src/nextcloud /usr/src/temp-nextcloud
++ mv /usr/src/tmp/nextcloud /usr/src/nextcloud
++ rm -r /usr/src/tmp
++ rm -r /usr/src/temp-nextcloud
+++ php -r 'require '\''/usr/src/nextcloud/version.php'\''; echo implode('\''.'\'', $OC_Version);'
++ image_version=33.0.9.1
++ IMAGE_MAJOR=33
++ set +ex
+Checking connection to the app store...
+App store is reachable.
+Maintenance mode already disabled
+Getting and backing up the status of apps for later; this might take a while...
+Disabling apps before the update to make the update procedure safer. This can take a while...
+contacts 8.1.0 disabled
+notes 4.12.4 disabled
+tasks 0.17.1 disabled
+calendar 6.1.0 disabled
+whiteboard 2.0.0 disabled
+notify_push 1.4.1 disabled
+deck 1.16.2 disabled
+System config value app_install_overwrite deleted
+contacts new version available: 8.3.20
+contacts updated
+notes new version available: 5.0.2
+notes updated
+tasks new version available: 0.18.1
+tasks updated
+calendar new version available: 6.6.1
+calendar updated
+deck new version available: 1.16.8
+deck updated
+Initializing Nextcloud 33.0.9.1 ...
+Initializing finished
+Upgrading Nextcloud from 32.0.2.2 to 33.0.9.1...
+Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+You may use your browser or the occ upgrade command to do the upgrade
+System config value integrity.check.disabled deleted
+Setting log level to debug
+Turned on maintenance mode
+Updating database schema
+Updated database
+Disabled incompatible app: nextcloud-aio
+Updating <federation> ...
+Updated <federation> to 1.23.0
+Updating <lookup_server_connector> ...
+Updated <lookup_server_connector> to 1.21.0
+Updating <oauth2> ...
+Updated <oauth2> to 1.21.0
+Updating <password_policy> ...
+Updated <password_policy> to 5.0.0
+Updating <photos> ...
+Updated <photos> to 6.0.0
+Updating <activity> ...
+Updated <activity> to 6.0.0
+Updating <circles> ...
+Updated <circles> to 33.0.0
+Updating <cloud_federation_api> ...
+Updated <cloud_federation_api> to 1.17.0
+Updating <dav> ...
+Fix broken values of calendar objects
+
+ Starting ...
+    0/0 [>---------------------------]   0%
+Clean up old calendar subscriptions from deleted users that were not cleaned-up
+
+ Starting ...
+    0/0 [->--------------------------]   0%
+Updated <dav> to 1.36.1
+Updating <files> ...
+Updated <files> to 2.5.0
+Updating <files_sharing> ...
+Updated <files_sharing> to 1.25.2
+Updating <files_trashbin> ...
+Updated <files_trashbin> to 1.23.0
+Updating <files_versions> ...
+Updated <files_versions> to 1.26.0
+Updating <sharebymail> ...
+Updated <sharebymail> to 1.23.0
+Updating <webhook_listeners> ...
+Updated <webhook_listeners> to 1.5.0
+Updating <workflowengine> ...
+Updated <workflowengine> to 2.15.0
+Updating <admin_audit> ...
+Updated <admin_audit> to 1.23.0
+Updating <comments> ...
+Updated <comments> to 1.23.0
+Updating <logreader> ...
+Updated <logreader> to 6.0.0
+Updating <nextcloud_announcements> ...
+Updated <nextcloud_announcements> to 5.0.0
+Updating <notifications> ...
+Updated <notifications> to 6.0.0
+Updating <systemtags> ...
+Updated <systemtags> to 1.23.0
+Updating <theming> ...
+Updated <theming> to 2.8.0
+Updating <bruteforcesettings> ...
+Updated <bruteforcesettings> to 6.0.0
+Updating <contactsinteraction> ...
+Updated <contactsinteraction> to 1.14.1
+Updating <dashboard> ...
+Updated <dashboard> to 7.13.0
+Updating <federatedfilesharing> ...
+Updated <federatedfilesharing> to 1.23.0
+Updating <files_downloadlimit> ...
+Updated <files_downloadlimit> to 5.1.0
+Updating <files_pdfviewer> ...
+Updated <files_pdfviewer> to 6.0.0
+Updating <files_reminders> ...
+Updated <files_reminders> to 1.6.0
+Updating <firstrunwizard> ...
+Updated <firstrunwizard> to 6.0.0
+Updating <privacy> ...
+Updated <privacy> to 5.0.0
+Updating <profile> ...
+Updated <profile> to 1.2.0
+Updating <provisioning_api> ...
+Updated <provisioning_api> to 1.23.0
+Updating <recommendations> ...
+Updated <recommendations> to 6.0.0
+Updating <related_resources> ...
+Updated <related_resources> to 4.0.0
+Updating <serverinfo> ...
+Updated <serverinfo> to 5.0.0
+Updating <settings> ...
+Updated <settings> to 1.16.0
+Updating <support> ...
+Updated <support> to 5.0.0
+Updating <survey_client> ...
+Updated <survey_client> to 5.0.0
+Updating <text> ...
+Updated <text> to 7.0.1
+Updating <twofactor_backupcodes> ...
+Updated <twofactor_backupcodes> to 1.22.0
+Updating <twofactor_totp> ...
+Updated <twofactor_totp> to 15.0.0
+Updating <updatenotification> ...
+Updated <updatenotification> to 1.23.0
+Updating <user_status> ...
+Updated <user_status> to 1.13.0
+Updating <viewer> ...
+Updated <viewer> to 6.0.0
+Updating <weather_status> ...
+Updated <weather_status> to 1.13.0
+Starting code integrity check...
+Finished code integrity check
+Update successful
+Turned off maintenance mode
+Resetting log level
+tcloud 33.0.9
+Posting notifications to users that are admins...
+Posting 'Nextcloud update to 33.0.9.1 successful!' to: admin
+Previous notification for update/Nextcloud update to 33.0.9.1 successful! marked as processed
+Notification with ID 642
+Done!
+contacts new version available: 8.9.0
+contacts updated
+notes new version available: 6.1.0
+notes updated
+deck new version available: 1.17.5
+deck updated
+Restoring app statuses. This may take a while...
+Enabling deck...
+Enabling notes...
+Enabling calendar...
+Enabling whiteboard...
+Enabling notify_push...
+Enabling tasks...
+Enabling contacts...
+All apps are up-to-date or no updates could be found
+System config value updatechecker set to boolean false
+updatenotification already enabled
+Config value were not updated
+Performing some optimizations...
+ - Repair MySQL collation
+     - Not a mysql database -> nothing to do
+ - Clean tags and favorites
+     - 0 tags of deleted users have been removed.
+     - 0 tags for delete files have been removed.
+     - 0 tag entries for deleted tags have been removed.
+     - 0 tags with no entries have been removed.
+ - Repair invalid shares
+ - Move .step file of updater to backup location
+ - Add move avatar background job
+     - Repair step already executed
+ - Add preview cleanup background jobs
+ - Migrate oc_properties table to nextcloud schema
+     - oc_properties table does not exist.
+ - Migrate oauth2_clients table to nextcloud schema
+     - Update the oauth2_access_tokens table schema.
+     - Update the oauth2_clients table schema.
+     - Delete clients (and their related access tokens) with the redirect_uri starting with oc:// or ending with *
+ - Repair language codes
+ - Add log rotate job
+ - Clear frontend caches
+     - Image cache cleared
+     - JS cache cleared
+ - Clear every generated avatar
+ - Add preview background cleanup job
+ - Queue a one-time job to cleanup old backups of the updater
+ - Cleanup invalid photocache files for carddav
+ - Add background job to cleanup login flow v2 tokens
+ - Remove potentially over exposing share links
+     - No need to remove link shares.
+ - Clear access cache of projects
+ - Reset generated avatar flag
+ - Keep legacy encryption enabled
+ - Check encryption key format
+ - Remove old dashboard app config data
+ - Add job to cleanup the bruteforce entries
+ - Queue a one-time job to check for user uploaded certificates
+ - Repair DAV shares
+ - Add background job to set the lookup server share state for users
+ - Add token cleanup job
+ - Clean up abandoned apps
+ - Add possibly missing system config
+ - Add AI tasks cleanup jobs
+ - Queue a job to generate metadata
+ - Cache logo dimension to fix size in emails on Outlook
+     - Logo dimensions are already known
+ - Remove legacy ".ocdata" file
+ - Add cleanup-deleted-users background job
+ - Add cleanup login tokens background job
+ - Validate account properties and store phone numbers in a known format for search
+     - Queued background to validate account properties.
+ - Queue a job to move the preview
+ - Migrate config keys
+ - Remove shares of old group memberships
+ - Remove broken DAV object properties
+     - 0 broken object properties removed
+ - Repair mime types
+ - Handle outdated scheduling events
+     - Cleaning up old scheduling events
+ - Remove invalid object properties
+     - 0 invalid object properties removed.
+ - Cleanup share names with false conflicts
+ - Upgrading Circles App
+ - Conditionally drop the federated_invites table
+     - Table federated_invites dropped
+ - Fix component of birthday calendars
+     - 4 birthday calendars updated.
+ - Regenerating birthday calendars to use new icons and fix old birthday events without year
+     - Repair step already executed
+ - Fix broken values of calendar objects
+    0 [>---------------------------]
+ - Registering building of calendar search index as background job
+     - Repair step already executed
+ - Register building of social profile search index as background job
+     - Repair step already executed
+ - Disable system address book
+     - Skipping repair step system address book has less then the threshold 5000 of contacts no need to disable
+ - Registering background jobs to update cache for webcal calendars
+     - Added 0 background jobs to update webcal calendars
+ - Registering building of calendar reminder index as background job
+     - Repair step already executed
+ - Register a background job to update rooms and resources
+ - Queue jobs to clean up orphan event and contact data
+ - Remove activity entries of private events
+ - Clean up old calendar subscriptions from deleted users that were not cleaned-up
+    0 [->--------------------------]
+     - 0 calendar subscriptions without an user have been cleaned up
+ - Migrate labels with wrong board mapping
+ - Fix the share type of guest shares when migrating from ownCloud
+ - Copy the share password into the dedicated column
+ - Set existing shares as accepted
+ - Clean up meta table
+ - Show a hint about the new editor to existing users
+ - Set binary permissions
+ - Update OAuth token expiration times
+ - init metadata
+ - Switches from default updater server to the customer one if a valid subscription is available
+     - Repair step already executed
+ - Migrate some config values to lazy loading
+ - Send an admin notification if monthly report is disabled
+ - Force-reset all Text document sessions
+ - Initialize migration of background images from dashboard to theming app
+ - Add background job to check for backup codes
+ - Populating added database structures for workflows
+Adding additional share_with_file_target_index index to the oc_share table, this can take some time...
+oc_share table updated successfully.
+Adding additional user_mountpoint_index index to the oc_share_external table, this can take some time...
+oc_share_external table updated successfully.
+Adding additional activity_object_user index to the oc_activity table, this can take some time...
+Removing activity_object index from the oc_activity table
+oc_activity table updated successfully.
+Done.
+Done.
+All tables already up to date!
+Applying one-click-instance settings...
+System config value one-click-instance set to boolean true
+System config value one-click-instance.user-limit set to integer 100
+System config value one-click-instance.link set to string https://nextcloud.com/all-in-one/
+support already enabled
+Adjusting log files...
+System config value upgrade.cli-upgrade-link set to string https://github.com/nextcloud/all-in-one/discussions/2726
+System config value loglevel set to integer 2
+System config value log_type set to string file
+System config value log_type_audit set to string file
+logreader already enabled
+System config value logfile set to string /var/www/html/data/nextcloud.log
+System config value logfile_audit set to string /var/www/html/data/audit.log
+System config value updatedirectory set to string /nc-updater
+System config value maintenance_window_start set to integer 100
+Applying network settings...
+System config value allow_local_remote_servers set to boolean true
+System config value davstorage.request_timeout set to integer 7200
+System config value trusted_domains => 1 set to string disc.btoma.top
+System config value overwrite.cli.url set to string https://disc.btoma.top/
+System config value documentation_url.server_logs set to string https://github.com/nextcloud/all-in-one/discussions/5425
+System config value htaccess.RewriteBase set to string /
+.htaccess has been updated
+System config value dbpersistent set to boolean false
+System config value auth.bruteforce.protection.enabled set to boolean true
+System config value ratelimit.protection.enabled set to boolean true
+System config value files_external_allow_create_new_local set to boolean false
+App "Nextcloud All-in-One" cannot be installed because it is not compatible with this version of the server.
+notify_push is up-to-date or no updates could be found
+System config value trusted_proxies => 0 set to string 127.0.0.1
+System config value trusted_proxies => 1 set to string ::1
+System config value trusted_proxies => 10 set to string 172.18.0.0/16
+Config value 'base_endpoint' for app 'notify_push' is now set to 'https://disc.btoma.top/push', stored as mixed in fast cache
+whiteboard disabled
+whiteboard 2.0.0 removed
