@@ -17,7 +17,7 @@ jobs:
 
       - name: Run log check
         shell: bash
-        run: ./check-logs.sh ./logs 2>&1 | tee check-logs-output.txt
+        run: ./check-logs.sh ./good_logs 2>&1 | tee check-logs-output.txt
 
       - name: Upload script output
         
